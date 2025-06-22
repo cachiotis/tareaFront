@@ -1,4 +1,5 @@
-const URL_BACK = "http://localhost:3000";
+// const URL_BACK = "http://localhost:3000";
+const URL_BACK = "https://tareaback-actualizado.onrender.com";
 
 document.getElementById('tarea').addEventListener('submit', async (e) => {
     e.preventDefault();
