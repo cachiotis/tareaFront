@@ -22,6 +22,8 @@ try {
     } catch (err) {
         console.error('Error creando usuario:', err);
     }
+
+    limpiarFormulario();
 });
 
 async function cargarTareas() {
@@ -36,6 +38,10 @@ async function cargarTareas() {
     } catch (err) {
         console.error('Error cargando usuarios:', err);
     }
+}
+
+function limpiarFormulario() {
+    document.getElementById("tarea").reset();
 }
 
 cargarTareas();
