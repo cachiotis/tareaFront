@@ -17,7 +17,7 @@ try {
         body: JSON.stringify(tarea),
     });
     const data = await response.json();
-    alert('Usuario creado: ' + JSON.stringify(data));
+    alert('Tarea creada: ' + JSON.stringify(data));
     cargarTareas();
     } catch (err) {
         console.error('Error creando usuario:', err);
