@@ -1,13 +1,16 @@
+const URL_BACK = "http://localhost:3000";
+
 document.getElementById('tarea').addEventListener('submit', async (e) => {
     e.preventDefault();
 
 const nombre = document.getElementById('nombre').value;
 const descripcion = document.getElementById('descripcion').value;
 
+
 const tarea = { nombre, descripcion };
 
 try {
-    const response = await fetch('http://localhost:3000/tareas', {
+    const response = await fetch(`${URL_BACK}/tareas`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(tarea),
@@ -22,7 +25,7 @@ try {
 
 async function cargarTareas() {
     try {
-        const response = await fetch('http://localhost:3000/tareas');
+        const response = await fetch(`${URL_BACK}/tareas`);
         const tareas = await response.json();
         const tareasList = document.getElementById('tareaList');
         tareasList.innerHTML = tareas.map(tarea => `
