@@ -68,4 +68,5 @@ input:focus {
 
 ul { 
     color: #555;
+    list-style-type: none;
 }
