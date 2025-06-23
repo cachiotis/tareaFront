@@ -33,6 +33,7 @@ async function cargarTareas() {
         const tareasList = document.getElementById('tareaList');
         tareasList.innerHTML = tareas.map(tarea => `
             <li>${tarea.nombre}<br>${tarea.descripcion}</li>
+            <hr>
             <br>
         `).join('');
     } catch (err) {
