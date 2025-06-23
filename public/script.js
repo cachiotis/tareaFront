@@ -31,6 +31,7 @@ async function cargarTareas() {
         const response = await fetch(`${URL_BACK}/tareas`);
         const tareas = await response.json();
         const tareasList = document.getElementById('tareaList');
+        tareasList.style.display = "";
         tareasList.innerHTML = tareas.map(tarea => `
             <li>${tarea.nombre}<br>${tarea.descripcion}</li>
             <hr>
