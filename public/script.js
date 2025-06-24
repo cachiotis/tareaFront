@@ -22,7 +22,6 @@ try {
     } catch (err) {
         console.error('Error creando usuario:', err);
     }
-
     limpiarFormulario();
 });
 
@@ -32,7 +31,7 @@ async function cargarTareas() {
         const tareas = await response.json();
         const tareasList = document.getElementById('tareaList');
         tareasList.innerHTML = tareas.map(tarea => `
-            <li>${tarea.nombre}<br>${tarea.descripcion}</li>
+            <li><strong>${tarea.nombre}</strong><br>${tarea.descripcion}</li>
             <hr>
             <br>
         `).join('');
